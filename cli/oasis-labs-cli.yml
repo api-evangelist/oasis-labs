@@ -1,0 +1,22 @@
+generated: '2026-07-20'
+method: searched
+source: npm @oasislabs/dpclient package metadata
+clis:
+- name: dpclient
+  package: "@oasislabs/dpclient"
+  binary: dpclient
+  official: true
+  license: Apache-2.0
+  product: PrivateSQL
+  purpose: >-
+    Command-line interface for database and privacy administrators to configure the
+    PrivateSQL differential-privacy system for data sharing.
+  service_host: https://dp.oasislabs.com
+  install:
+  - method: npm
+    command: npm install -g @oasislabs/dpclient
+  url: https://www.npmjs.com/package/@oasislabs/dpclient
+notes: >-
+  The Parcel TypeScript SDK (@oasislabs/parcel) is a client library, not a CLI, and
+  is catalogued in packages/. No first-party general-purpose Parcel CLI was found on
+  npm; dpclient is scoped to PrivateSQL administration.

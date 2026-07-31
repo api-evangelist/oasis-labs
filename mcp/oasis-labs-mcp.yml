@@ -1,0 +1,34 @@
+generated: '2026-07-20'
+method: derived
+status: candidate
+source: >-
+  Derived from the documented Parcel resource model (identity, dataset, app, grant,
+  permission, job × CRUD). No official hosted/remote MCP server was found for Oasis
+  Labs. This is a candidate design only — no MCPServer pointer is wired because no
+  server genuinely exists.
+server:
+  name: oasis-labs-parcel
+  transport: http
+  url: null
+tools:
+- name: create_dataset
+  description: Upload and tokenize a dataset in Parcel.
+  source: parcel resource dataset (create)
+- name: get_dataset
+  description: Read dataset metadata.
+  source: parcel resource dataset (read)
+- name: create_grant
+  description: Create an access grant governing who can compute over which data.
+  source: parcel resource grant (create)
+- name: create_job
+  description: Submit a confidential compute job over granted data.
+  source: parcel resource job (create)
+- name: get_job
+  description: Read the status/results of a confidential compute job.
+  source: parcel resource job (read)
+- name: create_identity
+  description: Create a Parcel identity.
+  source: parcel resource identity (create)
+- name: create_permission
+  description: Attach a permission to an app or grant.
+  source: parcel resource permission (create)

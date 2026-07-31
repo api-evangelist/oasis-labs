@@ -1,0 +1,36 @@
+generated: '2026-07-20'
+method: searched
+source: npm registry (registry.npmjs.org) + github.com/oasislabs
+packages:
+- language: javascript
+  registry: npm
+  name: "@oasislabs/parcel"
+  url: https://www.npmjs.com/package/@oasislabs/parcel
+  install: npm install @oasislabs/parcel
+  official: true
+  license: Apache-2.0
+  role: sdk
+  description: Official TypeScript client for the Oasis Labs Parcel platform (Node LTS + browser).
+  repository: https://github.com/oasislabs/parcel-clients
+- language: javascript
+  registry: npm
+  name: "@oasislabs/dpclient"
+  url: https://www.npmjs.com/package/@oasislabs/dpclient
+  install: npm install -g @oasislabs/dpclient
+  official: true
+  license: Apache-2.0
+  role: cli
+  bin: dpclient
+  description: >-
+    PrivateSQL admin CLI for database and privacy administrators to configure the
+    PrivateSQL system for data sharing; interacts with the PrivateSQL service at
+    https://dp.oasislabs.com.
+- language: javascript
+  registry: npm
+  name: "@oasislabs/parcel-nfts"
+  url: https://www.npmjs.com/package/@oasislabs/parcel-nfts
+  install: npm install @oasislabs/parcel-nfts
+  official: true
+  license: Apache-2.0
+  role: library
+  description: Code for NFT marketplaces to integrate Parcel NFTs (private data-backed NFTs).

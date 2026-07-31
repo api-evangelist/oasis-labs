@@ -1,0 +1,45 @@
+generated: '2026-07-20'
+method: searched
+source: >-
+  github.com/oasislabs/parcel-clients typescript/src/token.ts (Scope type
+  definition) — parcel.full | parcel.<resource>.<action>
+docs: https://docs.oasislabs.com/parcel/latest
+schemes:
+- name: OAuth2ClientCredentials
+  flow: clientCredentials
+  tokenUrl: https://auth.oasislabs.com/oauth/token
+  audience: https://api.oasislabs.com/parcel
+scope_grammar: "parcel.<resource>.<action>"
+resources:
+- identity
+- dataset
+- app
+- grant
+- permission
+- job
+actions:
+- create
+- read
+- update
+- delete
+scopes:
+- scope: parcel.full
+  description: Full access to all Parcel resources and actions (default scope).
+- scope: "parcel.identity.*"
+  description: Manage identities (create/read/update/delete).
+- scope: "parcel.dataset.*"
+  description: Manage datasets — upload, read metadata, update, delete tokenized data.
+- scope: "parcel.app.*"
+  description: Manage Parcel apps and their configuration.
+- scope: "parcel.grant.*"
+  description: Manage access grants that govern who can compute over which data.
+- scope: "parcel.permission.*"
+  description: Manage permissions attached to apps and grants.
+- scope: "parcel.job.*"
+  description: Manage confidential compute jobs.
+notes: >-
+  Scopes follow the pattern parcel.<resource>.<action> where <resource> is one of
+  identity, dataset, app, grant, permission, job (or *) and <action> is one of
+  create, read, update, delete (or *). parcel.full grants everything. The wildcard
+  entries above enumerate the per-resource families; concrete tokens combine a
+  single resource with a single action (e.g. parcel.dataset.read).

@@ -1,0 +1,40 @@
+generated: '2026-07-20'
+method: searched
+source: >-
+  github.com/oasislabs/parcel-clients (SDK source) + docs.oasislabs.com/parcel
+docs: https://docs.oasislabs.com/parcel/latest
+api: Oasis Labs Parcel API
+conventions:
+  authentication:
+    style: OAuth2 client-credentials, Bearer access token
+    client_authentication: private_key_jwt (signed JWT client assertion)
+    token_url: https://auth.oasislabs.com/oauth/token
+    audience: https://api.oasislabs.com/parcel
+    ref: authentication/oasis-labs-authentication.yml
+  base_urls:
+    api: https://api.oasislabs.com/parcel/v1
+    storage: https://storage.oasislabs.com/v1/parcel
+  versioning:
+    style: uri-path
+    current: v1
+  resource_model:
+    style: REST resources with CRUD verbs
+    resources:
+    - identity
+    - dataset
+    - app
+    - grant
+    - permission
+    - job
+  authorization:
+    style: scope-based (parcel.<resource>.<action>)
+    ref: scopes/oasis-labs-scopes.yml
+  idempotency:
+    supported: false
+    notes: No documented idempotency-key contract was found in the SDK or docs.
+notes: >-
+  Cross-cutting conventions derived from the official TypeScript SDK and the Parcel
+  documentation. Pagination, request-tracing, and rate-limit signaling were not
+  explicitly documented in the sources reviewed and are intentionally omitted rather
+  than guessed. No idempotency contract is published, so no Idempotency pointer is
+  wired.

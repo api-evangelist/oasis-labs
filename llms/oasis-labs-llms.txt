@@ -1,0 +1,27 @@
+# Oasis Labs
+
+> Oasis Labs builds privacy-preserving data and compute technologies. Its developer platform, Parcel, is a data-governance API for uploading, tokenizing, and computing over sensitive datasets under programmable access grants, with confidential compute jobs and identity/permission management. Oasis Labs also ships PrivateSQL (differential-privacy SQL analytics) and privacy-preserving AI tooling. Backed by a16z, DCVC, Pantera Capital, and Polychain.
+
+## APIs
+- [Parcel API docs](https://docs.oasislabs.com/parcel/latest): Data-governance API — datasets, grants, permissions, identities, apps, and confidential compute jobs. Base URL https://api.oasislabs.com/parcel/v1
+- [Parcel API reference](https://docs.oasislabs.com/parcel/latest/parcel-api.html): OpenAPI-backed reference (Redoc)
+- [Parcel TypeDoc](https://docs.oasislabs.com/parcel/latest/typedoc/): Generated TypeScript SDK reference
+
+## Auth
+- OAuth2 client-credentials at https://auth.oasislabs.com/oauth/token using a private_key_jwt client assertion; audience https://api.oasislabs.com/parcel
+- Scopes: parcel.full or parcel.<resource>.<action> where resource is one of identity, dataset, app, grant, permission, job
+
+## SDKs & Tools
+- [@oasislabs/parcel (npm)](https://www.npmjs.com/package/@oasislabs/parcel): Official TypeScript client (Apache-2.0)
+- [@oasislabs/dpclient (npm)](https://www.npmjs.com/package/@oasislabs/dpclient): PrivateSQL admin CLI (dpclient)
+- [parcel-examples](https://github.com/oasislabs/parcel-examples): SDK examples
+
+## Docs
+- [Documentation](https://docs.oasislabs.com/)
+- [GitHub organization](https://github.com/oasislabs)
+- [Blog (Medium)](https://medium.com/oasislabs)
+- [Terms of Service](https://www.oasislabs.com/terms-of-service)
+- [Privacy Policy](https://www.oasislabs.com/privacy-policy)
+
+## Notes
+- As of 2026-07-20, the hosted Parcel API host (api.oasislabs.com) and auth host (auth.oasislabs.com) were unreachable; documentation, npm packages, and the GitHub org remain available.

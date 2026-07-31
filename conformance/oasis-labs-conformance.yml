@@ -1,0 +1,21 @@
+generated: '2026-07-20'
+method: derived
+source: >-
+  Derived from the documented Parcel OAuth2 model (parcel-clients SDK). No published
+  compliance certifications were found, so no Compliance pointer is wired.
+standards:
+- id: oauth2
+  conforms: true
+  evidence: OAuth2 client-credentials flow with token endpoint auth.oasislabs.com/oauth/token
+- id: rfc7523-jwt-client-assertion
+  conforms: true
+  evidence: >-
+    client_assertion_type urn:ietf:params:oauth:client-assertion-type:jwt-bearer
+    (private_key_jwt) used for client authentication
+- id: oidc
+  conforms: false
+  evidence: >-
+    OIDC discovery could not be verified — auth host did not resolve on 2026-07-20 probe
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: No OpenAPI available to confirm application/problem+json error responses

@@ -1,0 +1,22 @@
+generated: '2026-07-20'
+method: probed
+source: live probes of Oasis Labs hosts (2026-07-20)
+hosts:
+- host: https://www.oasislabs.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+- host: https://api.oasislabs.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 521
+- host: https://auth.oasislabs.com
+  documents:
+  - path: /.well-known/openid-configuration
+    status: 000
+  - path: /.well-known/oauth-authorization-server
+    status: 000
+result: >-
+  No /.well-known discovery documents were served (all probes returned 404, 521, or
+  a connection failure). Recorded as observed absence; no WellKnown pointer wired
+  because no document was actually published.

@@ -1,8 +1,29 @@
 aid: oasis-labs
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/oasis-labs.png
 name: Oasis Labs
-description: Oasis Labs is a company surfaced as a portfolio company of a16z, dcvc, pantera-capital, polychain
-  and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the
-  enrichment pipeline.
+description: >-
+  Oasis Labs builds privacy-preserving data and compute technologies. Its
+  developer platform, Parcel, is a data-governance API for uploading, tokenizing,
+  and computing over sensitive datasets under programmable access grants, with
+  confidential compute jobs and identity/permission management. Oasis Labs also
+  ships PrivateSQL (differential-privacy SQL analytics) and privacy-preserving AI
+  tooling built on secure enclaves, MPC, homomorphic encryption, and zero-knowledge
+  proofs. The company was founded out of UC Berkeley and is backed by a16z, DCVC,
+  Pantera Capital, and Polychain. The Parcel REST API is documented at
+  docs.oasislabs.com with an official TypeScript SDK and OAuth2 client-credentials
+  (private_key_jwt) authentication.
 url: https://raw.githubusercontent.com/api-evangelist/oasis-labs/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -15,10 +36,46 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
-apis: []
+- Privacy
+- Data Governance
+- Confidential Computing
+- Blockchain
+- Differential Privacy
+- Machine Learning
+- Developer Platform
+- Web3
+apis:
+- name: Oasis Labs Parcel API
+  description: >-
+    Parcel is Oasis Labs' data-governance API for uploading and tokenizing
+    sensitive data, defining programmable access grants and permissions, running
+    confidential compute jobs over that data, and managing identities and apps.
+    Authentication is OAuth2 client-credentials using a JWT client assertion
+    (private_key_jwt).
+  humanURL: https://docs.oasislabs.com/parcel/latest
+  baseURL: https://api.oasislabs.com/parcel/v1
+  tags:
+  - Privacy
+  - Data Governance
+  - Confidential Computing
+  properties:
+  - type: Documentation
+    url: https://docs.oasislabs.com/parcel/latest
+  - type: APIReference
+    url: https://docs.oasislabs.com/parcel/latest/parcel-api.html
+  - type: Authentication
+    url: authentication/oasis-labs-authentication.yml
+  - type: OAuthScopes
+    url: scopes/oasis-labs-scopes.yml
+  - type: Conventions
+    url: conventions/oasis-labs-conventions.yml
+  - type: Lifecycle
+    url: lifecycle/oasis-labs-lifecycle.yml
+  - type: Conformance
+    url: conformance/oasis-labs-conformance.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -27,3 +84,44 @@ maintainers:
 common:
 - type: Website
   url: https://www.oasislabs.com/
+- type: DeveloperPortal
+  url: https://docs.oasislabs.com/
+- type: Documentation
+  url: https://docs.oasislabs.com/
+- type: APIReference
+  url: https://docs.oasislabs.com/parcel/latest/parcel-api.html
+- type: GettingStarted
+  url: https://docs.oasislabs.com/parcel/latest
+- type: GitHubOrganization
+  url: https://github.com/oasislabs
+- type: Blog
+  url: https://medium.com/oasislabs
+- type: TermsOfService
+  url: https://www.oasislabs.com/terms-of-service
+- type: PrivacyPolicy
+  url: https://www.oasislabs.com/privacy-policy
+- type: SDKs
+  url: packages/oasis-labs-packages.yml
+- type: Packages
+  url: packages/oasis-labs-packages.yml
+- type: CLI
+  url: cli/oasis-labs-cli.yml
+- type: Authentication
+  url: authentication/oasis-labs-authentication.yml
+- type: OAuthScopes
+  url: scopes/oasis-labs-scopes.yml
+- type: Conventions
+  url: conventions/oasis-labs-conventions.yml
+- type: Lifecycle
+  url: lifecycle/oasis-labs-lifecycle.yml
+- type: Conformance
+  url: conformance/oasis-labs-conformance.yml
+- type: DomainSecurity
+  url: security/oasis-labs-domain-security.yml
+- type: LLMsTxt
+  url: llms/oasis-labs-llms.txt
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 11
+  pass: local-v1

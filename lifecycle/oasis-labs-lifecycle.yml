@@ -1,0 +1,34 @@
+generated: '2026-07-20'
+method: searched
+source: >-
+  docs.oasislabs.com/parcel + live host probes (2026-07-20) + npm release history
+api: Oasis Labs Parcel API
+versioning:
+  scheme: uri-path
+  current: v1
+  docs: https://docs.oasislabs.com/parcel/latest
+deprecation:
+  policy_url: null
+  sunset_header: null
+  notes: No formal deprecation / Sunset-header policy was found.
+sla:
+  url: null
+status_page: null
+sdk_release_history:
+  package: "@oasislabs/parcel"
+  first_published: '2020-10-13'
+  last_published: '2025-02-03'
+  versions: 38
+availability:
+  probed: '2026-07-20'
+  api_host: https://api.oasislabs.com/parcel/v1
+  api_host_status: 521
+  auth_host: https://auth.oasislabs.com
+  auth_host_status: 000
+  docs_host_status: 200
+  notes: >-
+    As of the 2026-07-20 probe the Parcel API host returned HTTP 521 (origin
+    unreachable) and the auth host did not resolve, indicating the hosted Parcel
+    platform may be inactive/decommissioned. Documentation, the npm SDK, and the
+    GitHub org remain available. Recorded as observed reality, not a claim about
+    official product status.

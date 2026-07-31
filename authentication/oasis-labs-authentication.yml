@@ -1,0 +1,33 @@
+generated: '2026-07-20'
+method: searched
+source: >-
+  github.com/oasislabs/parcel-clients typescript/src/token.ts + http.ts
+  (documented OAuth2 model of the official SDK)
+docs: https://docs.oasislabs.com/parcel/latest
+summary:
+  types:
+  - oauth2
+  oauth2_flows:
+  - clientCredentials
+  client_authentication: private_key_jwt
+schemes:
+- name: OAuth2ClientCredentials
+  type: oauth2
+  flow: clientCredentials
+  token_url: https://auth.oasislabs.com/oauth/token
+  grant_type: client_credentials
+  client_authentication:
+    method: private_key_jwt
+    client_assertion_type: urn:ietf:params:oauth:client-assertion-type:jwt-bearer
+    description: >-
+      The client authenticates with a signed JWT client assertion (private_key_jwt)
+      rather than a shared client secret. The SDK mints a short-lived JWT
+      (default 1 hour lifetime) signed with the app's private key.
+  audience: https://api.oasislabs.com/parcel
+  default_scopes:
+  - parcel.full
+notes: >-
+  Access tokens are used as Bearer tokens against the Parcel API base
+  (https://api.oasislabs.com/parcel/v1) and storage endpoint
+  (https://storage.oasislabs.com/v1/parcel). Scope grammar is parcel.full or
+  parcel.<resource>.<action>; see scopes/oasis-labs-scopes.yml.
