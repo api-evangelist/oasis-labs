@@ -1,11 +1,9 @@
 generated: '2026-07-20'
 method: derived
 status: candidate
-source: >-
-  Derived from the documented Parcel resource model (identity, dataset, app, grant,
-  permission, job × CRUD). No official hosted/remote MCP server was found for Oasis
-  Labs. This is a candidate design only — no MCPServer pointer is wired because no
-  server genuinely exists.
+source: Derived from the documented Parcel resource model (identity, dataset, app, grant, permission,
+  job × CRUD). No official hosted/remote MCP server was found for Oasis Labs. This is a candidate design
+  only — no MCPServer pointer is wired because no server genuinely exists.
 server:
   name: oasis-labs-parcel
   transport: http
@@ -32,3 +30,9 @@ tools:
 - name: create_permission
   description: Attach a permission to an app or grant.
   source: parcel resource permission (create)
+deployment:
+  mode: none
+  verified: derived
+  tools: 7
+  checked: '2026-08-12'
+  source: catalog MCP census
