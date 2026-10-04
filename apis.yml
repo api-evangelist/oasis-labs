@@ -55,7 +55,7 @@ tags:
 - Confidential Computing
 - Blockchain
 - Differential Privacy
-- Machine-Learning
+- Machine Learning
 - Developer Platform
 - Web3
 tags_raw:
@@ -68,6 +68,7 @@ tags_raw:
 - Machine Learning
 - Developer Platform
 - Web3
+- Machine-Learning
 apis:
 - name: Oasis Labs Parcel API
   description: >-
